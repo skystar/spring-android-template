@@ -8,15 +8,16 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class GridViewAdapter extends BaseAdapter {
-	
+
 	View[] views;
 
-	public GridViewAdapter(Context context) {
-		views = new View[100];
-		for (int i = 0; i < views.length; i++) {
-			views[i] = getCellView(context);
+	public GridViewAdapter(Context context, String[] titles, String[] contents) {
+		views = new View[titles.length];
+		for (int i = 0; i < titles.length; i++) {
+			views[i] = getCellView(context, titles[i], contents[i]);
 		}
 	}
 
@@ -43,13 +44,18 @@ public class GridViewAdapter extends BaseAdapter {
 		return convertView;
 	}
 
-	private View getCellView(Context context) {
+	private View getCellView(Context context, String title, String content) {
 		LayoutInflater inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		// 使用View的对象itemView与R.layout.item关联
 		View itemView = (View) inflater.inflate(R.layout.item_cell, null);
 		ImageView imageView = (ImageView) itemView
 				.findViewById(R.id.imageView1);
+
+		TextView titleView = (TextView) itemView.findViewById(R.id.item_title);
+		titleView.setText(title);
+
+		TextView infoView = (TextView) itemView.findViewById(R.id.item_info);
+		infoView.setText(content);
 		Button button = (Button) itemView.findViewById(R.id.button1);
 		return itemView;
 	}
