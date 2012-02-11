@@ -11,17 +11,17 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import org.snailteam.android.adapter.GridViewAdapter;
+import org.snailteam.android.model.CityDTO;
 import org.snailteam.android.model.Shop;
 
 import android.app.Activity;
@@ -43,23 +43,25 @@ public class AppMainActivity extends Activity {
 		gridView = (GridView) findViewById(R.id.gridView1);
 		scrollView = (ScrollView) findViewById(R.id.scrollView1);
 		String url = "http://192.168.1.105:8080/team/citys";
-		HttpPost postRequest = new HttpPost(url);
+		List<CityDTO> citys = new ArrayList<CityDTO>();
+		HttpGet postRequest = new HttpGet(url);
 		HttpClient client = new DefaultHttpClient();
 		try {
 			HttpResponse postResp = client.execute(postRequest);
 			String result = "";
 			if (postResp.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
-				result = EntityUtils.toString(postRequest.getEntity());
+				result = EntityUtils.toString(postResp.getEntity());
 				JSONObject jsonObject = new JSONObject(result);
-				int count = jsonObject.getInt("count");
+				int count = Integer.valueOf(jsonObject.get("count").toString());
 				JSONArray arrayJson = jsonObject.getJSONArray("citys");
-				String[] titles = new String[count];
-				String[] contents = new String[count];
 				for (int i = 0; i < count; i++) {
-					titles[i] = arrayJson.getJSONObject(i).getString("id");
-					contents[i] = arrayJson.getJSONObject(i).getString("name");
-					gridView.setAdapter(new GridViewAdapter(this, titles,
-							contents));
+					CityDTO dto = new CityDTO();
+					dto.setCount(Long.valueOf(arrayJson.getJSONObject(i)
+							.getString("count")));
+					dto.setId(Long.valueOf(arrayJson.getJSONObject(i)
+							.getString("id")));
+					dto.setName(arrayJson.getJSONObject(i).getString("name"));
+					citys.add(dto);
 				}
 			}
 		} catch (UnsupportedEncodingException e) {
@@ -75,6 +77,7 @@ public class AppMainActivity extends Activity {
 			Toast.makeText(AppMainActivity.this, "4" + e.getMessage(),
 					Toast.LENGTH_LONG).show();
 		}
+		gridView.setAdapter(new GridViewAdapter(this, citys));
 
 	}
 
