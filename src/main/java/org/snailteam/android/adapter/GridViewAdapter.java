@@ -1,10 +1,11 @@
-package org.snailteam.android.adapter;
+package main.java.org.snailteam.android.adapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import main.java.org.snailteam.android.model.CityDTO;
+
 import org.snailteam.android.R;
-import org.snailteam.android.model.CityDTO;
 
 import android.content.Context;
 import android.view.LayoutInflater;
