@@ -17,6 +17,7 @@ m2eclipse-android-integration
 https://svn.codespot.com/a/eclipselabs.org/m2eclipse-android-integration/updates/m2eclipse-android-integration/
 
 android sdk 2.1.2  
+由于插件有问题，请手工将自己的android库添加到项目中，即可避免。
 
 this is a android application.
 android sdk 2.1.2
