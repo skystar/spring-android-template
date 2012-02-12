@@ -23,25 +23,14 @@ public class GridViewAdapter extends BaseAdapter {
 	public GridViewAdapter(Context context, List<CityDTO> citys) {
 		views = new ArrayList<View>();
 		for (CityDTO dto : citys) {
-			views.add(getCellView(context, dto));
+			views.add(getCityCellView(context, dto));
 		}
 	}
 
-	private View getCellView(final Context context, final CityDTO cityDTO) {
+	private View getCityCellView(final Context context, final CityDTO cityDTO) {
 		LayoutInflater inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View itemView = (View) inflater.inflate(R.layout.item_cell, null);
-		TextView titleView = (TextView) itemView.findViewById(R.id.item_title);
-		titleView.setText(cityDTO.getId().toString());
-		TextView infoView = (TextView) itemView.findViewById(R.id.item_info);
-		infoView.setText(cityDTO.getName());
-		Button button = (Button) itemView.findViewById(R.id.button1);
-		button.setOnClickListener(new OnClickListener() {
-			public void onClick(View arg0) {
-				Toast.makeText(context, cityDTO.getCount().toString(),
-						Toast.LENGTH_LONG).show();
-			}
-		});
 		return itemView;
 	}
 

@@ -3,34 +3,24 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_margin="4px"
+    android:background="@color/menu_bgcolor"
     android:orientation="horizontal" >
-
-    <LinearLayout
+
+    <ImageView
+        android:id="@+id/imageView1"
         android:layout_width="wrap_content"
-        android:layout_height="54dp"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/item_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="标题"
-            android:textColor="#FFFFFFFF"
-            android:textSize="22px" />
-
-        <TextView
-            android:id="@+id/item_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="内容"
-            android:textColor="#FFFFFFFF"
-            android:textSize="13px" />
-    </LinearLayout>
-
+        android:layout_height="wrap_content"
+        android:layout_weight="0.17"
+        android:src="@drawable/icon" />
+
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_marginRight="60px"
+        android:layout_weight="0.17"
+        android:text="Button"
+        android:textSize="24px"
+        android:textStyle="bold" />
 
 </LinearLayout>
