@@ -1,4 +1,4 @@
-package main.java.org.snailteam.android.model;
+package org.snailteam.android.model;
 
 import java.util.ArrayList;
 import java.util.List;

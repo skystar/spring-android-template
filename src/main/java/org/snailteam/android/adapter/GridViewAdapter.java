@@ -1,21 +1,15 @@
-package main.java.org.snailteam.android.adapter;
-
+package org.snailteam.android.adapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.org.snailteam.android.model.CityDTO;
+import org.snailteam.android.model.CityDTO;
 
-import org.snailteam.android.R;
-
+import android.R;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class GridViewAdapter extends BaseAdapter {
 
@@ -31,7 +25,7 @@ public class GridViewAdapter extends BaseAdapter {
 	private View getCityCellView(final Context context, final CityDTO cityDTO) {
 		LayoutInflater inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		View itemView = (View) inflater.inflate(R.layout.item_cell, null);
+		View itemView = (View) inflater.inflate(R.layout.test_list_item, null);
 		return itemView;
 	}
 

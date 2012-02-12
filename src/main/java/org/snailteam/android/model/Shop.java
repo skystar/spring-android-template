@@ -1,4 +1,4 @@
-package main.java.org.snailteam.android.model;
+package org.snailteam.android.model;
 
 public class Shop {
 	
