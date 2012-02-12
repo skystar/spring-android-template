@@ -24,7 +24,6 @@ import org.snailteam.android.adapter.GridViewAdapter;
 import org.snailteam.android.model.CityDTO;
 import org.snailteam.android.model.Shop;
 
-import android.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.GridView;
