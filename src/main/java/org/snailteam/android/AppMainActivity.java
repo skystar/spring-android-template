@@ -1,9 +1,13 @@
-package org.snailteam.android;
+package main.java.org.snailteam.android;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+
+import main.java.org.snailteam.android.adapter.GridViewAdapter;
+import main.java.org.snailteam.android.model.CityDTO;
+import main.java.org.snailteam.android.model.Shop;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -20,9 +24,7 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.snailteam.android.adapter.GridViewAdapter;
-import org.snailteam.android.model.CityDTO;
-import org.snailteam.android.model.Shop;
+import org.snailteam.android.R;
 
 import android.app.Activity;
 import android.os.Bundle;
