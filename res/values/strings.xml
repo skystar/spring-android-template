@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello android!</string>
+    <string name="hello">潇湘府</string>
     <string name="app_name">android</string>
     <color name="menu_bgcolor">#a4dbde</color>
     <color name="top_bgcolor">#fae9bb</color>

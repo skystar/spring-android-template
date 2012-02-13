@@ -3,24 +3,24 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_margin="4px"
-    android:background="@color/menu_bgcolor"
+    android:background="@color/bg_color"
     android:orientation="horizontal" >
-
+
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/menuImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0.17"
+        android:layout_weight="0.20"
         android:src="@drawable/icon" />
-
-    <Button
-        android:id="@+id/button1"
+
+    <TextView
+        android:id="@+id/menuText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="60px"
-        android:layout_weight="0.17"
-        android:text="Button"
-        android:textSize="24px"
-        android:textStyle="bold" />
+        android:layout_height="45dp"
+        android:layout_margin="4px"
+        android:background="@color/bg_color"
+        android:text="北京"
+        android:textColor="@color/font_color"
+        android:textSize="16px" />
 
 </LinearLayout>

@@ -1,42 +1,45 @@
 package org.snailteam.android.adapter;
-import java.util.ArrayList;
-import java.util.List;
 
-import org.snailteam.android.model.CityDTO;
 
-import android.R;
+import org.snailteam.android.R;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-public class GridViewAdapter extends BaseAdapter {
+public class ItemCellGridViewAdapter extends BaseAdapter {
 
-	List<View> views;
+	View[] views;
 
-	public GridViewAdapter(Context context, List<CityDTO> citys) {
-		views = new ArrayList<View>();
-		for (CityDTO dto : citys) {
-			views.add(getCityCellView(context, dto));
+	public ItemCellGridViewAdapter(Context context) {
+		views = new View[10];
+		for (int i = 0; i < views.length; i++) {
+			views[i] =  getCityCellView(context);
+			
 		}
+		
+		
+		
+		
 	}
 
-	private View getCityCellView(final Context context, final CityDTO cityDTO) {
+	private View getCityCellView(final Context context) {
 		LayoutInflater inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		View itemView = (View) inflater.inflate(R.layout.test_list_item, null);
+		View itemView = (View) inflater.inflate(R.layout.item_cell, null);
 		return itemView;
 	}
 
 	@Override
 	public int getCount() {
-		return views.size();
+		return views.length;
 	}
 
 	@Override
 	public View getItem(int position) {
-		return views.get(position);
+		return views[position];
 	}
 
 	@Override
@@ -47,7 +50,7 @@ public class GridViewAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		if (convertView == null) {
-			return views.get(position);
+			return views[position];
 		}
 		return convertView;
 	}
