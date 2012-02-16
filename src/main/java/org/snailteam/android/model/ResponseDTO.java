@@ -5,7 +5,9 @@ import java.util.List;
 
 
 public class ResponseDTO {
+	
 	int count = 0;
+	
 	List<CityDTO> citys = new ArrayList<CityDTO>();
 
 	List<ShopDTO> shops = new ArrayList<ShopDTO>();
