@@ -7,7 +7,6 @@
 	<name>android</name>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>apk</packaging>
-
 	<!-- -->
 	<properties>
 		<android-platform>7</android-platform>
@@ -44,6 +43,15 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		
+		<repository>
+        <id>release-repo</id>
+        <name>git repo</name>
+        <url>https://github.com/xiaofancn/spring-android-template/tree/master/libs</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository> 
 	</repositories>
 
 

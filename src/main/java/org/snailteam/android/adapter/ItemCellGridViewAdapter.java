@@ -44,11 +44,11 @@ public class ItemCellGridViewAdapter extends BaseAdapter {
 		if (cityDTO != null) {
 			menuText.setText(cityDTO.getName());
 			menuText.setOnClickListener(new OnClickListener() {
-
 				public void onClick(View v) {
 					Intent open = new Intent();
 					Bundle bund = new Bundle();
-					bund.putDoubleArray("location", cityDTO.getLocation());
+					double [] location = {116.395645,39.929986};
+					bund.putDoubleArray("location",location);
 					open.putExtras(bund);
 					open.setClass(context, BaiduMapActivity.class);// 我们要传递给的Activity类
 					context.startActivity(open);

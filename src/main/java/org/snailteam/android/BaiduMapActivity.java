@@ -1,12 +1,10 @@
 package org.snailteam.android;
 
-import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
 
 import com.baidu.mapapi.BMapManager;
 import com.baidu.mapapi.GeoPoint;
-import com.baidu.mapapi.LocationListener;
 import com.baidu.mapapi.MKAddrInfo;
 import com.baidu.mapapi.MKDrivingRouteResult;
 import com.baidu.mapapi.MKLocationManager;

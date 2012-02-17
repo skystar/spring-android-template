@@ -22,7 +22,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 public class AppMainActivity extends Activity {
-	public static String url = "http://192.168.0.118:8080/team/citys";
+	public static String url = "http://192.168.1.102:8080/team/citys";
 	MenuStaut currStatu = MenuStaut.MENU;
 	GridView gridView;
 
@@ -42,8 +42,10 @@ public class AppMainActivity extends Activity {
 					CityDTO city = new CityDTO();
 					JSONObject item = array.getJSONObject(i);
 					city.setName(item.getString("name"));
-					JSONArray locationJson = item.getJSONArray("location");
-					city.setLocation((double[]) item.get("location"));
+					showMessage(item.get("location").toString());
+					List<Double> d  =  (List<Double>) item.get("location");
+					double [] loc = {d.get(0).doubleValue(),d.get(1).doubleValue()};
+					city.setLocation(loc);
 					citys.add(city);
 				}
 			} catch (JSONException e) {
