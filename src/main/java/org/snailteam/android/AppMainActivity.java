@@ -22,7 +22,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 public class AppMainActivity extends Activity {
-	public static String url = "http://192.168.0.103:8080/team/citys";
+	public static String url = "http://192.168.1.5:8080/team/citys";
 	MenuStaut currStatu = MenuStaut.MENU;
 	GridView gridView;
 
