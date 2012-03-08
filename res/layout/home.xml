@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/main_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/home_menu_shop"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="2.0dip"
+                android:drawableTop="@drawable/menu_save"
+                android:tag="radio_button0"
+                android:text="@string/home_menu_shop" />
+
+            <RadioButton
+                android:id="@+id/home_menu_friend"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="2.0dip"
+                android:drawableTop="@drawable/menu_save"
+                android:tag="radio_button0"
+                android:text="@string/home_menu_friend" />
+
+            <RadioButton
+                android:id="@+id/home_menu_plaza"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="2.0dip"
+                android:drawableTop="@drawable/menu_save"
+                android:tag="radio_button0"
+                android:text="@string/home_menu_plaza" />
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

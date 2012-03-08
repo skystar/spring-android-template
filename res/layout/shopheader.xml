@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="4dip"
+    android:paddingLeft="12dip" >
+
+    <ImageView
+        android:id="@+id/shopHeaderPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8px" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/shopHeaderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8px"
+        android:layout_toRightOf="@id/shopHeaderPic"
+        android:textColor="@color/black"
+        android:textSize="14px" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/shopHeaderDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopHeaderName"
+        android:layout_margin="8px"
+        android:layout_toRightOf="@id/shopHeaderPic"
+        android:text="30m"
+        android:textColor="@color/red"
+        android:textSize="12px" >
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/shopHeaderMapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopHeaderName"
+        android:layout_margin="8px"
+         android:layout_toRightOf="@id/shopHeaderDistance"
+        android:src="@drawable/mapicon" />
+
+    <TextView
+        android:id="@+id/shopHeaderAddr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopHeaderPic"
+        android:textColor="@color/black" >
+    </TextView>
+
+</RelativeLayout>

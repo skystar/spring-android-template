@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="4dip"
+    android:paddingLeft="12dip" >
+
+    <TextView
+        android:id="@+id/productBodyDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8px"
+        android:textColor="@color/black"
+        android:textSize="13px" />
+
+    <TextView
+        android:id="@+id/productBodyCate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8px"
+        android:textColor="@color/black"
+        android:textSize="13px" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/productBodyPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="13px" />
+
+        <TextView
+            android:id="@+id/productBodyTuanPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4px"
+            android:textColor="@color/black"
+            android:textSize="13px" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/productBodyMount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8px"
+        android:textColor="@color/black"
+        android:textSize="13px" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/productBodyStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="13px" />
+
+        <TextView
+            android:id="@+id/productBodyEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4px"
+            android:textColor="@color/black"
+            android:textSize="13px" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/productBodyRemark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8px"
+        android:textColor="@color/black"
+        android:textSize="13px" />
+
+    <TextView
+        android:id="@+id/productBodyIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8px"
+        android:textColor="@color/black"
+        android:textSize="13px" />
+
+</LinearLayout>

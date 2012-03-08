@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="4dip"
+    android:paddingLeft="12dip" >
+
+    <ImageView
+        android:id="@+id/productCellPic"
+        android:layout_width="100px"
+        android:layout_height="70px"
+        android:layout_margin="8px" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/productCellName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8px"
+        android:layout_toRightOf="@id/productCellPic"
+        android:textColor="@color/black"
+        android:textSize="14px" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/productCellDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productCellName"
+        android:layout_toRightOf="@id/productCellPic"
+        android:text="30m"
+		android:layout_margin="8px"
+        android:textColor="@color/red"
+        android:textSize="12px" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/productCellPrice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_below="@id/productCellPic"
+        android:textColor="@color/black" >
+    </TextView>
+
+</RelativeLayout>
