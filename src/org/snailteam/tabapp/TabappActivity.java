@@ -1,15 +1,9 @@
 package org.snailteam.tabapp;
 
-import java.io.IOException;
-import java.util.List;
 
-import org.apache.http.client.ClientProtocolException;
-import org.json.JSONException;
 import org.snailteam.tabapp.activity.ShopHomeActivity;
 import org.snailteam.tabapp.activity.ShopListActivity;
 import org.snailteam.tabapp.knowledge.HomeMenuType;
-import org.snailteam.tabapp.model.City;
-import org.snailteam.tabapp.until.PublicFactory;
 
 import android.app.TabActivity;
 import android.content.Intent;

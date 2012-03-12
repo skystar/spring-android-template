@@ -6,11 +6,13 @@
     android:paddingBottom="4dip"
     android:paddingLeft="12dip" >
 
+    
     <ImageView
         android:id="@+id/productCellPic"
         android:layout_width="100px"
-        android:layout_height="70px"
-        android:layout_margin="8px" >
+        android:layout_height="90px"
+        android:layout_margin="8px"
+        android:src="@drawable/huoguo" >
     </ImageView>
 
     <TextView
@@ -28,10 +30,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/productCellName"
+        android:layout_margin="8px"
         android:layout_toRightOf="@id/productCellPic"
+        android:textColor="@color/black"
         android:text="30m"
-		android:layout_margin="8px"
-        android:textColor="@color/red"
         android:textSize="12px" >
     </TextView>
 
@@ -39,9 +41,10 @@
         android:id="@+id/productCellPrice"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="right"
         android:layout_below="@id/productCellPic"
-        android:textColor="@color/black" >
+        android:gravity="right"
+        android:textColor="@color/red"
+        android:textSize="14px" >
     </TextView>
 
 </RelativeLayout>

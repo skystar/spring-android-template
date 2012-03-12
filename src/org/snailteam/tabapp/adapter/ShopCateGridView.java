@@ -33,7 +33,7 @@ public class ShopCateGridView extends BaseAdapter {
 		ImageView imageView = (ImageView) itemView.findViewById(R.id.cataImage);
 		imageView.setImageResource(R.drawable.ic_launcher);
 		TextView textView = (TextView) itemView.findViewById(R.id.cataText);
-		textView.setText("商店列表!");
+		textView.setText("商店列表");
 		itemView.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				Intent open = new Intent();
@@ -51,7 +51,7 @@ public class ShopCateGridView extends BaseAdapter {
 		ImageView imageView = (ImageView) itemView.findViewById(R.id.cataImage);
 		imageView.setImageResource(R.drawable.ic_launcher);
 		TextView textView = (TextView) itemView.findViewById(R.id.cataText);
-		textView.setText("商品列表!");
+		textView.setText("商品列表");
 		itemView.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				Intent open = new Intent();

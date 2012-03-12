@@ -31,7 +31,6 @@ public class ShopListAdapter extends BaseAdapter {
 		View itemView = (View) inflater.inflate(R.layout.shopcell, null);
 		ImageView shopSmallPic = (ImageView) itemView
 				.findViewById(R.id.shopCellPic);
-		shopSmallPic.setImageResource(R.drawable.huoguo);
 		// shopSmallPic
 		// .setImageURI(Uri
 		// .parse("http://p1.meituan.net/275.168/deal/201203/02/007_0302153445.jpg"));

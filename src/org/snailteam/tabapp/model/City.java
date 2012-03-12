@@ -1,6 +1,8 @@
 package org.snailteam.tabapp.model;
 
-public class City {
+import java.io.Serializable;
+
+public class City implements Serializable {
 	Long id;
 	String name;
 	Double longitude;
